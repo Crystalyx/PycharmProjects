@@ -1,5 +1,6 @@
 from random import randint as next
 import math
+import copy
 
 weights = []
 
@@ -25,6 +26,17 @@ def create_dna():
     for i in range(0, 33):
         values.append(next(0, weights[i]))
     return DNA(values)
+
+
+def make_average(dna1, dna2):
+    values = []
+    for i in range(0, 33):
+        if next(0, 1) < 0.5:
+            values.append(dna1.values[i])
+        else:
+            values.append(dna2.values[i])
+    return DNA(values)
+
 
 class DNA:
     def __init__(self, values):
@@ -60,4 +72,9 @@ class DNA:
         return max(self.values[3], self.values[5], self.values[17]) % 3
 
     def mutated_copy(self):
-        return self
+        new_values = copy.deepcopy(self.values)
+        for i in range(next(1, 10)):
+            pos = next(0, len(self.values) - 1)
+            shift = next(0, weights[pos])
+            new_values[pos] = (new_values[pos] + shift) % weights[pos]
+        return DNA(new_values)

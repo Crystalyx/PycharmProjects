@@ -24,9 +24,9 @@ def make_stat(filename):
                     surname = name_parts[0]
                     name = name_parts[1]
                     sex_letter = 'M'
-                    if (name[-1] == 'Р°' or name[-1] == "СЏ" or
-                        name == 'Р›СЋР±РѕРІСЊ') and name != 'РР»СЊСЏ' \
-                            and name != 'РќРёРєРёС‚Р°' and name != 'Р›С‘РІР°':
+                    if (name[-1] == 'а' or name[-1] == "я" or
+                        name == 'Любовь') and name != 'Илья' \
+                            and name != 'Никита' and name != 'Лёва':
                         sex_letter = 'F'
                     if stat[sex_letter][year].__contains__(name):
                         stat[sex_letter][year][name] = \

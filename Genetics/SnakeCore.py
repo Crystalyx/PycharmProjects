@@ -6,14 +6,10 @@ import math
 import NeuralCore as nc
 import DNACore as dnac
 from MagicCore import *
+from SexCore import *
+import copy
 
-count = 100
-
-
-def get_food(game_map, cx, cy, hue):
-    # if count > cx > 0 and count > cy > 0:
-    return game_map[cx % len(game_map)][cy % len(game_map[0])][hue]
-    # return 0
+count = 91
 
 
 class Snake(pygame.sprite.Sprite):
@@ -38,36 +34,36 @@ class Snake(pygame.sprite.Sprite):
         self.hue = self.dna.hue()
         self.dead = False
         self.pregnant = False
+        self.partner_dna = 0
 
         # model.evaluate(x_test, y_test)
 
     def copy(self, width, height):
-        snak = Snake(random.randint(0, width - int(3 * width / count)),
-                     random.randint(0, height - int(3 * height / count)))
-        snak.dna = self.dna
-        snak.neuro_model = nc.NeuroModel(self.dna)
-        snak.speech_model = nc.SpeechModel(self.dna)
+        snak = Snake(self.x, self.y)
+        if self.partner_dna != 0:
+            snak.dna = dnac.make_average(self.dna, self.partner_dna)
+        else:
+            snak.dna = self.dna
+        snak.neuro_model = copy.deepcopy(self.neuro_model)
+        snak.speech_model = copy.deepcopy(self.neuro_model)
         snak.mutate_mind()
         snak.mutate_genome()
         return snak
 
-    def update(self, pressed_keys, game_map, width, height):
-        x = self.x
-        y = self.y
-        cx = int(count * (x - 5) / width)
-        cy = int(count * (y - 5) / height)
-
+    def update(self, pressed_keys, world, width, height):
+        cx = world.get_chunk_x(self.x)
+        cy = world.get_chunk_y(self.y)
         # print(str(cx), str(cy))
 
-        inputs = [[get_food(game_map, cx, cy, self.hue) / 255,
-                   get_food(game_map, cx + 1, cy, self.hue) / 255,
-                   get_food(game_map, cx - 1, cy, self.hue) / 255,
-                   get_food(game_map, cx, cy + 1, self.hue) / 255,
-                   get_food(game_map, cx, cy - 1, self.hue) / 255,
-                   get_food(game_map, cx + 1, cy + 1, self.hue) / 255,
-                   get_food(game_map, cx - 1, cy + 1, self.hue) / 255,
-                   get_food(game_map, cx + 1, cy - 1, self.hue) / 255,
-                   get_food(game_map, cx - 1, cy - 1, self.hue) / 255,
+        inputs = [[world.get_food_at_chunk_by_hue(cx, cy, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx + 1, cy, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx - 1, cy, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx, cy + 1, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx, cy - 1, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx + 1, cy + 1, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx - 1, cy + 1, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx + 1, cy - 1, self.hue) / 255,
+                   world.get_food_at_chunk_by_hue(cx - 1, cy - 1, self.hue) / 255,
                    self.food,
                    self.red,
                    self.green,
@@ -84,13 +80,23 @@ class Snake(pygame.sprite.Sprite):
         self.green = math.fabs(neuro_result[2] * 255)
         self.blue = math.fabs(neuro_result[3] * 255)
         self.speed = int(neuro_result[4] * 3) + 3
+        want_to_create_gamet = neuro_result[5] > 0.7 or self.food > 200
         self.dead = False
 
-        yum = random.randint(12, 15)
-        self.food = self.food - self.dna.metabolism()
-        if game_map[cx % count][cy % count][self.hue] > yum and self.food < 255:
-            game_map[cx % count][cy % count][self.hue] = \
-                game_map[cx % count][cy % count][self.hue] - yum
+        if world.item_at(self.x, self.y):
+            item = world.get_item_at(self.x, self.y)
+            if item != 0:
+                item.activate(world, self)
+                world.set_item_at(self.x, self.y)
+
+        if want_to_create_gamet:
+            world.set_item_at(self.x, self.y, Gamet(self))
+            self.food -= self.dna.metabolism() - 20
+
+        yum = random.randint(2, 8)
+        self.food = self.food - self.dna.metabolism() - 3
+        if world.get_food_at_chunk_by_hue(cx, cy, self.hue) > yum and self.food < 255:
+            world.refill(cx, cy, -yum * 4, self.hue)
             self.food = self.food + yum
 
         if self.food > 0:
@@ -128,40 +134,24 @@ class Snake(pygame.sprite.Sprite):
                 id.append(round(math.fabs(i)))
             if self.dna.magic_type() == 0:
                 spell = construct_light_spell(id)
-                cast_light_spell(self, spell, game_map, count, cx, cy)
+                cast_light_spell(self, spell, world, count, cx, cy)
             else:
                 spell = construct_dark_spell(id)
-                cast_dark_spell(self, spell, game_map, count, cx, cy)
+                cast_dark_spell(self, spell, world, count, cx, cy)
 
     def mutate_genome(self):
-        # new_genome = ''
-        # # print('old: ',self.genome)
-        # gene_count = random.randint(0, 3)
-        # for i in range(0, gene_count + 1):
-        #     order = ord(self.genome[i])
-        #     # print('rand')
-        #     new_order = (order + random.randint(-3, 3))
-        #     if new_order > ord('d'):
-        #         new_order = ord('d')
-        #     if new_order < ord('a'):
-        #         new_order = ord('a')
-        #     new_genome = new_genome + chr(new_order)
-        # self.genome = new_genome + self.genome[gene_count + 1:]
-        # # print(self.genome)
-        # # if self.genome[3] == 'a':
-        # #     print('caster', self.genome)
-        pass
+        self.dna = self.dna.mutated_copy()
 
     def mutate_mind(self):
-        # neuron_count = random.randint(0, 20)
-        # for i in range(0, neuron_count):
-        #     target = random.randint(0, len(self.neuro_model.nn.layers[1].np['w']) - 1)
-        #     self.neuro_model.nn.layers[1].np['w'][target] = \
-        #         self.neuro_model.nn.layers[1].np['w'][target] + random.gauss(0, 0.125)
-        #
-        #     for j in self.neuro_model.nn.layers[1].np['w'][target]:
-        #         if j > 1:
-        #             j = 1
-        #         if j < 0:
-        #             j = 0
+        neuron_count = random.randint(0, 20)
+        for i in range(0, neuron_count):
+            target = random.randint(0, len(self.neuro_model.nn.layers[1].np['w']) - 1)
+            self.neuro_model.nn.layers[1].np['w'][target] = \
+                self.neuro_model.nn.layers[1].np['w'][target] + random.gauss(0, 0.125)
+
+            for j in self.neuro_model.nn.layers[1].np['w'][target]:
+                if j > 1:
+                    j = 1
+                if j < 0:
+                    j = 0
         pass

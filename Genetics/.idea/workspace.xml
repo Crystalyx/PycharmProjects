@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36295902-436a-4fc1-89bc-5637c257bf22" name="Default Changelist" comment="" />
+    <list default="true" id="36295902-436a-4fc1-89bc-5637c257bf22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Course_4_03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Course_4_03/find3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SexCore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorldCore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python.hw/encodeTo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.py" beforeDir="false" afterPath="$PROJECT_DIR$/Core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNACore.py" beforeDir="false" afterPath="$PROJECT_DIR$/DNACore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/MagicCore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakeCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/SnakeCore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python.hw/homestat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python.hw/homestat.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,15 +22,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Genetics$Core.coverage" NAME="Core Coverage Results" MODIFIED="1551539196915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Genetics$Core.coverage" NAME="Core Coverage Results" MODIFIED="1552124115344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="180">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -26,10 +39,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WorldCore.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeuralCore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -40,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SnakeCore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="129" column="43" lean-forward="true" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -50,10 +72,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SexCore.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DNACore.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="907">
+              <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MagicCore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="195">
+              <caret line="64" column="51" lean-forward="true" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -84,18 +127,21 @@
         <option value="$PROJECT_DIR$/SnakeClass.py" />
         <option value="$PROJECT_DIR$/NeuroModel.py" />
         <option value="$PROJECT_DIR$/DNA.py" />
-        <option value="$PROJECT_DIR$/DNACore.py" />
         <option value="$PROJECT_DIR$/NeuralCore.py" />
-        <option value="$PROJECT_DIR$/MagicCore.py" />
-        <option value="$PROJECT_DIR$/SnakeCore.py" />
         <option value="$PROJECT_DIR$/../Python.hw/gethtml.py" />
+        <option value="$PROJECT_DIR$/../Python.hw/homestat.py" />
+        <option value="$PROJECT_DIR$/../Python.hw/encodeTo.py" />
+        <option value="$PROJECT_DIR$/DNACore.py" />
+        <option value="$PROJECT_DIR$/SexCore.py" />
+        <option value="$PROJECT_DIR$/WorldCore.py" />
+        <option value="$PROJECT_DIR$/SnakeCore.py" />
         <option value="$PROJECT_DIR$/Core.py" />
+        <option value="$PROJECT_DIR$/MagicCore.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1555" />
-    <option name="y" value="464" />
+    <option name="x" value="292" />
     <option name="width" value="992" />
     <option name="height" value="575" />
   </component>
@@ -105,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +166,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,18 +257,21 @@
       <workItem from="1551456973120" duration="442000" />
       <workItem from="1551468161896" duration="3439000" />
       <workItem from="1551544999311" duration="711000" />
-      <workItem from="1551546926600" duration="599000" />
+      <workItem from="1551546926600" duration="602000" />
+      <workItem from="1551548407802" duration="5352000" />
+      <workItem from="1551621275772" duration="11041000" />
+      <workItem from="1551688667341" duration="8338000" />
+      <workItem from="1552122697055" duration="2015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69882000" />
+    <option name="totallyTimeSpent" value="96631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1312" y="464" width="1334" height="768" extended-state="6" />
-    <editor active="true" />
+    <frame x="32" y="0" width="1334" height="768" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17313665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20885094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -232,19 +281,43 @@
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.29283488" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.32866043" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39719626" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.3296875" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.396875" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Run" order="12" weight="0.18691589" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.2046875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" x="0" y="0" width="283" height="568" id="Documentation" order="4" side_tool="true" visible="true" weight="0.113354035" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="283" height="568" id="Documentation" order="5" side_tool="true" visible="true" weight="0.023291925" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.071428575" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.09968847" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.29283488" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.3296875" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.396875" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.296875" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="283" height="568" id="Documentation" order="5" side_tool="true" visible="true" weight="0.023291925" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -314,16 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DNACore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Python.hw/homestat_striped.py" />
     <entry file="file:///usr/lib/python3.6/os.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -339,30 +402,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core.py">
+    <entry file="file://$PROJECT_DIR$/../Python.hw/_1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python.hw/encodeTo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python.hw/homestat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SexCore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NeuralCore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DNACore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="907">
+          <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorldCore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SnakeCore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        <state relative-caret-position="135">
+          <caret line="129" column="43" lean-forward="true" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -371,8 +475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MagicCore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="195">
+          <caret line="64" column="51" lean-forward="true" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
         </state>
       </provider>
     </entry>

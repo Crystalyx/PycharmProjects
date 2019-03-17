@@ -7,7 +7,7 @@ def make_stat(filename):
     stat = {'M': {}, 'F': {}}
     year = ''
     years = []
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, 'r', encoding='cp1251') as f:
         lines = f.readlines()
         for line in lines:
             result = re.findall('href=.*/>(.*)</a>|<h3>(.*)</h3>', line)
